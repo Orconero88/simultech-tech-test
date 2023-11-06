@@ -1,0 +1,20 @@
+.gridItem {
+    flex-grow: 0;
+}
+
+.movie {
+    width: 100px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movieText {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
