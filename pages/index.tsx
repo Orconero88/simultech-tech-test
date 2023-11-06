@@ -12,9 +12,9 @@ interface HomeProps {
 }
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const searchText: string | string[] | undefined = context.query.searchText;
+  const searchText: string | string[] | undefined = context.query.searchText ?? "";
   const res = await getMovieByName(searchText);
-  return { props: { results: res, searchText: context.query.searchText } };
+  return { props: { results: res, searchText: searchText } };
 }
 
 export default function Home(props: HomeProps) {
