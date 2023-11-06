@@ -19,7 +19,7 @@ export const Searchbar: React.FC<SearchProps> = (props: SearchProps) => {
                 value={text}
                 onChange={onChangeHandler}
             />
-            <input type="submit" className="rounded bg-black text-white p-2 ml-4 h-8" value={"Search"}></input>
+            <input type="submit" className="rounded bg-black text-white p-2 ml-4 h-8 cursor-pointer" value={"Search"}></input>
 
         </form>
 
