@@ -1,4 +1,6 @@
 import { useState } from "react";
+import React from "react";
+
 interface SearchProps {
     searchText: string
 }

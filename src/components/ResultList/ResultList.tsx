@@ -1,6 +1,4 @@
 import React from 'react';
-//import css from "./ResultList.module.css";
-import { NoImage } from '../NoImage/NoImage';
 import { Movie } from '@/models/interfaces/movie';
 
 interface ResultsProps {
@@ -19,9 +17,8 @@ export const ResultList: React.FC<ResultsProps> = (props) => {
 
 
                     return <div key={movies.id} className="flex flex-row gap-x-4 max-w-sm sm:max-w-3xl">
-                        {
-                            movies.cover ? <img className="h-32 min-w-32" src={movies.cover} alt="" /> : <NoImage />
-                        }
+
+                        <img className="h-32 min-w-32" src={movies.cover} alt="" />
                         <div className='flex flex-col'>
                             <h1 className="font-black text-xl">{movies.title}</h1>
                             <div className=" ">{movies.overview}</div>
@@ -33,3 +30,4 @@ export const ResultList: React.FC<ResultsProps> = (props) => {
         </div>
     </>
 }
+export default ResultList;
