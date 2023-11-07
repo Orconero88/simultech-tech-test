@@ -7,18 +7,22 @@ interface ResultsProps {
 
 export const ResultList: React.FC<ResultsProps> = (props) => {
     return <>
-        <span className='mb-8 mt-1'>{props.result.length} results</span>
+        <span className='mt-1'>{props.result.length} results</span>
 
-        <div id="resultList" className="flex flex-col gap-y-4">
+        <div id="resultList" className="mt-6 flex flex-col gap-y-4">
             {
                 props.result.map((movies: Movie) => {
-                    return <div key={movies.id} className="flex flex-row gap-x-4 max-w-sm sm:max-w-3xl">
-                               <img className="h-32 min-w-32" src={movies.cover} alt="" />
-                               <div className='flex flex-col'>
-                                   <h1 className="font-black text-xl">{movies.title}</h1>
-                                   <div className=" ">{movies.overview}</div>
-                               </div>
-                           </div>
+                    return <div key={movies.id} className="flex flex-row gap-x-4 max-w-sm sm:max-w-3xl border border-gray-300 p-1 rounded-md shadow-md">
+                        <div className="flex min-w-fit">
+                            <div className="m-auto">
+                                <img className="flex align-middle h-32 min-w-32 rounded-md" src={movies.cover} alt="" />
+                            </div>
+                        </div>
+                        <div className='flex flex-col'>
+                            <h1 className="font-black text-xl">{movies.title}</h1>
+                            <p>{movies.overview}</p>
+                        </div>
+                    </div>
                 })
             }
         </div>
