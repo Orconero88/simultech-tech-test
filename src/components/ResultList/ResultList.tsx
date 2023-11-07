@@ -15,7 +15,7 @@ export const ResultList: React.FC<ResultsProps> = (props) => {
                     return <div key={movies.id} className="flex flex-row gap-x-4 max-w-sm sm:max-w-3xl border border-gray-300 p-1 rounded-md shadow-md">
                         <div className="flex min-w-fit">
                             <div className="m-auto">
-                                <img className="flex align-middle h-32 min-w-32 rounded-md" src={movies.cover} alt="" />
+                                <img className="flex align-middle h-32 rounded-md" src={movies.cover} alt="" />
                             </div>
                         </div>
                         <div className='flex flex-col'>
